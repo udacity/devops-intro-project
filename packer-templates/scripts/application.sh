@@ -26,23 +26,10 @@ gem install sass
 #for running grunt tasks manually
 npm install -g grunt-cli
 
-
-cd /home/vagrant
-mkdir devops-kungfu
-# get requirement package
-cd /home/vagrant/devops-kungfu
-wget https://raw.githubusercontent.com/chef/devops-kungfu/master/package.json
-
-# install some packeges missing in the official repo
-npm install lru-cache sigmund
-npm install accepts batch
-npm install qunitjs
-
-# install the rest of the requirements. This takes a while
-npm install
-
-# reset permissions
-chown vagrant -R /home/vagrant
+# install some additional packeges required by the app
+npm install -g lru-cache sigmund
+npm install -g accepts batch
+npm install -g qunitjs
 
 # reload nginx to serve from the directory
 service nginx reload
