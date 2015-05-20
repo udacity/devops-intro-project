@@ -4,8 +4,8 @@
       "PACKER_BOX_NAME": "ubuntu-14.04.2-server-amd64",
       "AWS_ACCESS_KEY_ID": "{{env `AWS_ACCESS_KEY_ID`}}",
       "AWS_SECRET_ACCESS_KEY": "{{env `AWS_SECRET_ACCESS_KEY`}}"
-    },
-    "builders": [
+  },
+  "builders": [
       {
         "type": "virtualbox-iso",
         "boot_command": [
@@ -47,7 +47,7 @@
         "ssh_username": "vagrant",
         "ssh_wait_timeout": "10000s",
         "type": "virtualbox-iso",
-        "vm_name": "{{ user `PACKER_BOX_NAME` }}",
+        "vm_name": "main-{{ user `PACKER_BOX_NAME` }}",
         "vboxmanage": [
           ["modifyvm", "{{.Name}}", "--memory", "1024"],
           ["modifyvm", "{{.Name}}", "--cpus", "2"]
@@ -62,18 +62,15 @@
         "source_ami": "ami-10b68a78",
         "instance_type": "t1.micro",
         "ssh_username": "ubuntu",
-        "ami_name": "packer-app-server {{timestamp}}"
+        "ami_name": "control-{{ user `PACKER_BOX_NAME` }}-{{timestamp}}"
       }
   ],
-
   "provisioners": [
     {
       "type": "shell",
-      "execute_command": "echo 'vagrant'|{{.Vars}} sudo -S -E bash '{{.Path}}'",
+      "execute_command": "echo 'vagrant'|sudo -S -E bash '{{.Path}}'",
       "scripts": [
-        "scripts/update.sh",
-        "scripts/sshd.sh",
-        "scripts/sudoers.sh"
+        "scripts/update.sh"
       ]
     },
     {
@@ -86,10 +83,17 @@
     ]
     },
     {
+      "type": "file",
+      "source": "../jenkins-config",
+      "destination": "/tmp"
+    },
+    {
       "type": "shell",
       "execute_command": "echo 'vagrant'|sudo -S -E bash '{{.Path}}'",
       "scripts": [
-        "scripts/application.sh",
+        "scripts/jenkins.sh",
+        "scripts/graphite.sh",
+        "scripts/nginx.sh",
         "scripts/cleanup.sh"
       ]
     }
@@ -99,7 +103,7 @@
       {
         "type": "vagrant",
         "compression_level": "9",
-        "output": "{{.Provider}}/{{ user `PACKER_BOX_NAME` }}-appserver_{{.Provider}}.box"
+        "output": "../output/{{.Provider}}/control-{{ user `PACKER_BOX_NAME` }}.box"
       }
     ]
   ]
