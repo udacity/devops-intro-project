@@ -50,7 +50,7 @@ Part II - Cloning, Developing and Running the web application
 
 2. In the VM run:
 	'cd devops-kungfu'
-	Install app specific node packages: 'npm install'
+	Install app specific node packages: 'sudo npm install'
    Now you can run tests -  'grunt -v'
 
 7. Open localhost:8080 from your local machine.
