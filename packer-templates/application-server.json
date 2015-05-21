@@ -79,9 +79,9 @@
     "only": ["virtualbox-iso"],
     "execute_command": "echo 'vagrant'|sudo -S -E bash '{{.Path}}'",
     "scripts": [
-    "scripts/virtualbox.sh",
-    "scripts/vagrant.sh"
-    ]
+        "scripts/virtualbox.sh",
+        "scripts/vagrant.sh"
+      ]
     },
     {
       "type": "shell",
