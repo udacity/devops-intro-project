@@ -33,8 +33,8 @@ EOF
 
 ln -s /etc/uwsgi/apps-available/graphite.ini /etc/uwsgi/apps-enabled/
 
-# initialise the DB
-python /opt/graphite/webapp/graphite/manage.py syncdb
+# initialise the DB, but create no users
+python /opt/graphite/webapp/graphite/manage.py syncdb --noinput
 
 chown -R www-data:www-data /opt/graphite/webapp/ /opt/graphite/storage/
 
