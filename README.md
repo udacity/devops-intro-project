@@ -20,22 +20,23 @@ Instructions for Intro to DevOps Project
 
 ### To make application server image for cloud
 1. Set up your cloud provider credentials. 
-
    See additional information in the appropriate directories:
-   aws/ - for Amazon Web Services. Builder type 'amazon-ebs'
-   google/ - for Google Cloud Platform. Builder type 'googlecompute'
-   azure/ - for Microsoft Azure. Builder type 'azure'. 
+
+    aws/ - for Amazon Web Services. Builder type 'amazon-ebs'
+    google/ - for Google Cloud Platform. Builder type 'googlecompute'
+    azure/ - for Microsoft Azure. Builder type 'azure'. 
             It will require additional installation.
 
 2. pick the builder for the cloud provider you set up in step 1 and
-   run 'packer build -only="your builder type" application-server.json'
-   for example 'packer build -only=amazon-ebs application-server.json'
+ 
+    run 'packer build -only="your builder type" application-server.json'
+    for example 'packer build -only=amazon-ebs application-server.json'
 
-3. cd to your cloud providers directory
-4. run 'vagrant up'
-5. run 'vagrant ssh' to connect to the server
+3. For GCE - use the ssh option from your project dashboard to connect to the instance.
+4. For AWS - you can use vagrant to connect to your instance - `cd aws ; vagrant up; vagrant ssh`
 
 ### To make control (CI and monitoring) server image for cloud
+
 1. Set up your cloud provider credentials.
 2. pick the builder for the cloud provider you set up in step 1 and
    run 'packer build -only="your builder type" control-server.json'
@@ -44,11 +45,15 @@ Instructions for Intro to DevOps Project
 ## Part II - Cloning, Developing and Running the web application
 
 1. On your local machine go to the root directory of this repository
-   run 'git clone https://github.com/chef/devops-kungfu.git devops-kungfu'
 
-2. In the VM run:
-	'cd devops-kungfu'
-	Install app specific node packages: 'sudo npm install'
-   Now you can run tests -  'grunt -v'
+    run 'git clone https://github.com/chef/devops-kungfu.git devops-kungfu'
 
-7. Open localhost:8080 from your local machine.
+2. Open localhost:8080 from your local machine to see the app running.
+
+3. If you want to run tests on the app - 
+    In the VM run:
+    'cd devops-kungfu'
+    To install app specific node packages: 
+    'sudo npm install'
+    Now you can run tests -  'grunt -v'
+
