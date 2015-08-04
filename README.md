@@ -1,16 +1,14 @@
 Instructions for Intro to DevOps Project
 ========================================
 
-Part 0 - Local Installation
-###########################
+## Part 0 - Local Installation
 
 1. Install VirtualBox
 2. Install Vagrant
 3. Install Packer
 4. Install git
 
-Part I - Build Boxes with Packer
-################################
+## Part I - Build Boxes with Packer
 
 ### To make an image for local development
 1. run 'packer build -only=virtualbox-iso application-server.json'
@@ -43,7 +41,7 @@ Part I - Build Boxes with Packer
    run 'packer build -only="your builder type" control-server.json'
 
 
-Part II - Cloning, Developing and Running the web application
+## Part II - Cloning, Developing and Running the web application
 
 1. On your local machine go to the root directory of this repository
    run 'git clone https://github.com/chef/devops-kungfu.git devops-kungfu'
