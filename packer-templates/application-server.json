@@ -3,7 +3,8 @@
       "PACKER_OS_FLAVOUR": "ubuntu",
       "PACKER_BOX_NAME": "ubuntu-14.04.3-server-amd64",
       "AWS_ACCESS_KEY_ID": "{{env `AWS_ACCESS_KEY_ID`}}",
-      "AWS_SECRET_ACCESS_KEY": "{{env `AWS_SECRET_ACCESS_KEY`}}"
+      "AWS_SECRET_ACCESS_KEY": "{{env `AWS_SECRET_ACCESS_KEY`}}",
+      "DIGITALOCEAN_API_TOKEN": "{{env `DIGITALOCEAN_API_TOKEN`}}"
     },
     "builders": [
       {
@@ -74,6 +75,15 @@
         "machine_type": "n1-standard-1",
         "ssh_username": "ubuntu"
       }
+      {
+        "type": "digitalocean",
+        "api_token": "{{ user `DIGITALOCEAN_API_TOKEN` }}",
+        "image": "ubuntu-14-04-x64",
+        "region": "nyc3",
+        "size": "512mb",
+        "droplet_name": "jenkins",
+        "private_networking": true
+      }
   ],
 
   "provisioners": [
@@ -106,7 +116,7 @@
     [
       {
         "type": "vagrant",
-        "except": ["googlecompute"],
+        "except": ["googlecompute", "digitalocean"],
         "compression_level": "9",
         "output": "{{.Provider}}/{{ user `PACKER_BOX_NAME` }}-appserver_{{.Provider}}.box"
       }
