@@ -13,7 +13,7 @@ Instructions for Intro to DevOps Project
 ### To make an image for local development
 1. run `packer build -only=virtualbox-iso application-server.json`
 2. run `cd virtualbox`
-3. run `vagrant box add ubuntu-14.04.2-server-amd64-appserver_virtualbox.box --name devops-appserver`
+3. run `vagrant box add ubuntu-14.04.3-server-amd64-appserver_virtualbox.box --name devops-appserver`
 4. run `vagrant up`
 5. run `vagrant ssh` to connect to the server
 
