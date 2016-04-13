@@ -73,7 +73,15 @@
         "image_name": "control-ubuntu-1404-{{timestamp}}",
         "machine_type": "n1-standard-1",
         "ssh_username": "ubuntu"
-      }
+      },
+      {
+      "type": "digitalocean",
+      "api_token": "6a58938e35c8136000b5ca8c94545271eda35dac5b6787b0d1dad10e7db73857",
+      "image": "ubuntu-14-04-x64",
+      "region": "tor1",
+      "size": "512mb",
+      "droplet_name": "ubuntu-512mb-udacity-devops"
+    }
   ],
   "provisioners": [
     {
