@@ -1,2 +1,4 @@
 .DS_Store
 packer_cache
+packer-templates/virtualbox
+devops-kungfu/*

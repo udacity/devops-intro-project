@@ -11,9 +11,10 @@ Instructions for Intro to DevOps Project
 ## Part I - Build Boxes with Packer
 
 ### To make an image for local development
-1. run `packer build -only=virtualbox-iso application-server.json`
+0. run `cd packer-templates`
+1. run `/path/to/packer build -only=virtualbox-iso application-server.json`
 2. run `cd virtualbox`
-3. run `vagrant box add ubuntu-14.04.2-server-amd64-appserver_virtualbox.box --name devops-appserver`
+3. run `vagrant box add ubuntu-14.04.3-server-amd64-appserver_virtualbox.box --name devops-appserver`
 4. run `vagrant up`
 5. run `vagrant ssh` to connect to the server
 
@@ -28,14 +29,16 @@ See full directions at: https://www.udacity.com/wiki/ud611
 
 1. On your local machine go to the root directory of this repository
 
-    run `git clone https://github.com/chef/devops-kungfu.git devops-kungfu`
+    1. run `git clone https://github.com/chef/devops-kungfu.git devops-kungfu`
+    2. run `sudo apt-get install npm`
+    3. run `sudo ln -s nodejs /usr/bin/node`
+    4. run `sudo npm install`
+    5. Open http://localhost:8080 from your local machine to see the app running.
 
-2. Open http://localhost:8080 from your local machine to see the app running.
-
-3. If you want to run tests on the app - 
+2. If you want to run tests on the app -
     In the VM run:
     `cd devops-kungfu`
     To install app specific node packages: 
     `sudo npm install`
-    Now you can run tests - `grunt -v`
+    Now you can run tests - `grunt -v --force`
                                      
