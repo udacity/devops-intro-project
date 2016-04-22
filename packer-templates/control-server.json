@@ -3,7 +3,8 @@
       "PACKER_OS_FLAVOUR": "ubuntu",
       "PACKER_BOX_NAME": "ubuntu-14.04.4-server-amd64",
       "AWS_ACCESS_KEY_ID": "{{env `AWS_ACCESS_KEY_ID`}}",
-      "AWS_SECRET_ACCESS_KEY": "{{env `AWS_SECRET_ACCESS_KEY`}}"
+      "AWS_SECRET_ACCESS_KEY": "{{env `AWS_SECRET_ACCESS_KEY`}}",
+      "DIGITALOCEAN_API_TOKEN": "{{env `DIGITALOCEAN_API_TOKEN`}}"
   },
   "builders": [
       {
@@ -76,11 +77,12 @@
       },
       {
       "type": "digitalocean",
-      "api_token": "6a58938e35c8136000b5ca8c94545271eda35dac5b6787b0d1dad10e7db73857",
+      "api_token": "{{ user `DIGITALOCEAN_API_TOKEN` }}",
       "image": "ubuntu-14-04-x64",
       "region": "tor1",
       "size": "512mb",
-      "droplet_name": "ubuntu-512mb-udacity-devops"
+      "droplet_name": "udacity-devops",
+      "private_networking": true
     }
   ],
   "provisioners": [
@@ -120,7 +122,7 @@
     [
       {
         "type": "vagrant",
-        "except": ["googlecompute"],
+        "except": ["googlecompute", "digitalocean"],
         "compression_level": "9",
         "output": "../output/{{.Provider}}/control-{{ user `PACKER_BOX_NAME` }}.box"
       }
