@@ -13,10 +13,9 @@ Instructions for Intro to DevOps Project
 ### To make an image for local development
 1. run `packer build -only=virtualbox-iso application-server.json`
 2. run `cd virtualbox`
-3. run `vagrant box add ubuntu-14.04.2-server-amd64-appserver_virtualbox.box --name devops-appserver`
+3. run `vagrant box add ubuntu-14.04.3-server-amd64-appserver_virtualbox.box --name devops-appserver`
 4. run `vagrant up`
 5. run `vagrant ssh` to connect to the server
-
 
 ### To make application server image for cloud
 
@@ -38,4 +37,8 @@ See full directions at: https://www.udacity.com/wiki/ud611
     To install app specific node packages: 
     `sudo npm install`
     Now you can run tests - `grunt -v`
+
+Troubleshooting:
+
+	1. In step 3, be sure your virtualbox version matches the one in the packer-templates/virtualbox/ directory
                                      
