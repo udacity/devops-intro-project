@@ -6,6 +6,7 @@ apt-get -y install uwsgi-plugin-python uwsgi
 apt-get -y install python-dev
 apt-get -y install python-django python-django-tagging python-cairo
 apt-get -y install python-pip
+pip install pytz
 pip install https://github.com/graphite-project/ceres/tarball/master
 pip install whisper
 pip install carbon
