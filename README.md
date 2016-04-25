@@ -11,6 +11,9 @@ Instructions for Intro to DevOps Project
 ## Part I - Build Boxes with Packer
 
 ### To make an image for local development
+
+From the packer-templates directory:
+
 1. run `packer build -only=virtualbox-iso application-server.json`
 2. run `cd virtualbox`
 3. run `vagrant box add ubuntu-14.04.4-server-amd64-appserver_virtualbox.box --name devops-appserver`
