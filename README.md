@@ -6,7 +6,7 @@ These instructions assume familiarity with Git and GitHub. If you are not comfor
 ## Setting up your local machine
 
 * Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-*  Install [Vagrant](https://www.vagrantup.com/downloads.html)
+* Install [Vagrant](https://www.vagrantup.com/downloads.html)
 * Install [Packer](https://www.packer.io/downloads.html)
 * Fork this repository on GitHub and clone it to your local machine
 
@@ -37,8 +37,8 @@ Build 'virtualbox-iso' errored: ISO download failed.
 
 ## Part II: Cloning, Developing and Running the web application
 
-* On your local machine go to the root directory of this repository
-* run `git clone https://github.com/chef/devops-kungfu.git devops-kungfu`
+* On your local machine go to the root directory of this repository (devops-intro-project)
+* Run `git clone https://github.com/chef/devops-kungfu.git devops-kungfu`
 * Open http://localhost:8080 from your local machine to see the app running.
 * In the VM, run `cd devops-kungfu`
 * To install app specific node packages, run `sudo npm install`. You may see several errors; they can be ignored for now.
