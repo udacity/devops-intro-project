@@ -14,7 +14,7 @@ These instructions assume familiarity with Git and GitHub. If you are not comfor
 
 From the packer-templates directory on your local machine:
 
-* run `packer build -only=virtualbox-iso application-server.json`. You may see various timeouts and errors:
+* run `packer build -only=virtualbox-iso application-server.json`. You may see various timeouts and errors, as shown below. If you do, retry the command until the ISO download succeeds:
 
 ```
 read: operation timed out
@@ -28,8 +28,6 @@ Build 'virtualbox-iso' errored: ISO download failed.
 ==> Some builds didn't complete successfully and had errors:
 --> virtualbox-iso: ISO download failed.
 ```
-
-If you do, retry the command until the ISO download succeeds.
 
 * run `cd virtualbox`
 * run `vagrant box add ubuntu-14.04.4-server-amd64-appserver_virtualbox.box --name devops-appserver`
@@ -48,7 +46,7 @@ If you do, retry the command until the ISO download succeeds.
 
 ### Troubleshooting
 
-If you encounter errors with Ubuntu version numbers not being available or checksum errors on Ubuntu,it means that this repository has not yet been updated for the latest Ubuntu version. Feel free to mention this in the [forum](https://discussions.udacity.com/c/nd012-p1-intro-to-devops/nd012-the-devops-environment). Meanwhile, you can fix this error for yourself by editing the contents of the `application-server.json` and `control-server.json` template files inside the `packer-templates` folder
+If you encounter errors with Ubuntu version numbers not being available or checksum errors on Ubuntu,it means that this repository has not yet been updated for the latest Ubuntu version. Feel free to mention this in the [forum](https://discussions.udacity.com/c/nd012-p1-intro-to-devops/nd012-the-devops-environment). Meanwhile, you can fix this error for yourself by editing the contents of the `application-server.json` and `control-server.json` template files inside the `packer-templates` folder.
 
 * Find the newest version number and checksum from the [Ubuntu website for this release](http://releases.ubuntu.com/trusty/)
 * Edit `PACKER_BOX_NAME` and `iso_checksum` in the template files to match that version number and checksum.
