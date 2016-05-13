@@ -42,7 +42,7 @@ Build 'virtualbox-iso' errored: ISO download failed.
 * Open http://localhost:8080 from your local machine to see the app running.
 * In the VM, run `cd devops-kungfu`
 * To install app specific node packages, run `sudo npm install`. You may see several errors; they can be ignored for now.
-* Now you can run tests - `grunt -v`. The tests will run, then quit with an error. 
+* Now you can run tests with the command `grunt -v`. The tests will run, then quit with an error. 
 
 ### Troubleshooting
 
