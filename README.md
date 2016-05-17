@@ -10,11 +10,11 @@ These instructions assume familiarity with Git and GitHub. If you are not comfor
 * Install [Packer](https://www.packer.io/downloads.html)
 * Fork this repository on GitHub and clone it to your local machine
 
-## Part I: Build Boxes with Packer
+## Part I: Building a box with Packer
 
 From the packer-templates directory on your local machine:
 
-* run `packer build -only=virtualbox-iso application-server.json`. You may see various timeouts and errors, as shown below. If you do, retry the command until the ISO download succeeds:
+* Run `packer build -only=virtualbox-iso application-server.json`. You may see various timeouts and errors, as shown below. If you do, retry the command until the ISO download succeeds:
 
 ```
 read: operation timed out
@@ -29,13 +29,13 @@ Build 'virtualbox-iso' errored: ISO download failed.
 --> virtualbox-iso: ISO download failed.
 ```
 
-* run `cd virtualbox`
-* run `vagrant box add ubuntu-14.04.4-server-amd64-appserver_virtualbox.box --name devops-appserver`
-* run `vagrant up`
-* run `vagrant ssh` to connect to the server
+* Run `cd virtualbox`
+* Run `vagrant box add ubuntu-14.04.4-server-amd64-appserver_virtualbox.box --name devops-appserver`
+* Run `vagrant up`
+* Run `vagrant ssh` to connect to the server
 
 
-## Part II: Cloning, Developing and Running the web application
+## Part II: Cloning, developing, and running the web application
 
 * On your local machine go to the root directory of this repository (devops-intro-project)
 * Run `git clone https://github.com/chef/devops-kungfu.git devops-kungfu`
