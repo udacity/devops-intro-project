@@ -8,7 +8,8 @@ These instructions assume familiarity with Git and GitHub. If you are not comfor
 * Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 * Install [Vagrant](https://www.vagrantup.com/downloads.html)
 * Install [Packer](https://www.packer.io/downloads.html)
-* Fork this repository on GitHub and clone it to your local machine
+* Fork this repo to your own account
+* Clone the forked repo to your local machine using this command: `git clone http://github.com/<account-name>/devops-intro-project devops`, replacing `<account-name>` with your GitHub username.
 
 ## Part I: Building a box with Packer
 
@@ -37,7 +38,7 @@ Build 'virtualbox-iso' errored: ISO download failed.
 
 ## Part II: Cloning, developing, and running the web application
 
-* On your local machine go to the root directory of this repository (devops-intro-project)
+* On your local machine go to the root directory of the cloned repository 
 * Run `git clone https://github.com/chef/devops-kungfu.git devops-kungfu`
 * Open http://localhost:8080 from your local machine to see the app running.
 * In the VM, run `cd devops-kungfu`
