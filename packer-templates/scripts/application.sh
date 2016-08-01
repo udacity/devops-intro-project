@@ -12,7 +12,7 @@ apt-get remove --purge node
 
 # application and build process required packages
 # add Node.js maintained repositories
-curl -sL https://deb.nodesource.com/setup | bash -
+curl -sL https://deb.nodesource.com/setup_4.x | bash -
 
 # for tests and build
 apt-get -y install nodejs
