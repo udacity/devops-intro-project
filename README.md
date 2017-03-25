@@ -33,7 +33,7 @@ Build 'virtualbox-iso' errored: ISO download failed.
 ```
 
 * Run `cd virtualbox`
-* Run `vagrant box add ubuntu-14.04.4-server-amd64-appserver_virtualbox.box --name devops-appserver`
+* Run `vagrant box add ubuntu-14.04.5-server-amd64-appserver_virtualbox.box --name devops-appserver`
 * Run `vagrant up`
 * Run `vagrant ssh` to connect to the server
 
