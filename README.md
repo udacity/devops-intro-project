@@ -33,7 +33,7 @@ Build 'virtualbox-iso' errored: ISO download failed.
 ```
 
 * Run `cd virtualbox`
-* Run `vagrant box add ubuntu-14.04.4-server-amd64-appserver_virtualbox.box --name devops-appserver`
+* Run `vagrant box add ubuntu-14.04.5-server-amd64-appserver_virtualbox.box --name devops-appserver`
 * Run `vagrant up`
 * Run `vagrant ssh` to connect to the server
 
@@ -44,7 +44,7 @@ Build 'virtualbox-iso' errored: ISO download failed.
 * Run `git clone https://github.com/chef/devops-kungfu.git devops-kungfu`
 * Open http://localhost:8080 from your local machine to see the app running.
 * In the VM, run `cd devops-kungfu`
-* To install app specific node packages, run `sudo npm install`. You may see several errors; they can be ignored for now.
+* To install app specific node packages, run `sudo apt install npm`. You may see several errors; they can be ignored for now.
 * Now you can run tests with the command `grunt -v`. The tests will run, then quit with an error. 
 
 ### Troubleshooting
