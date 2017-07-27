@@ -10,7 +10,7 @@ pip install pytz
 pip install https://github.com/graphite-project/ceres/tarball/master
 pip install whisper
 pip install carbon
-pip install graphite-web
+pip install --prefix=/opt/graphite --install-lib=/opt/graphite/lib graphite-web
 
 # make config files from examples
 cd /opt/graphite/conf/
