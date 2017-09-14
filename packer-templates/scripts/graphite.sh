@@ -3,7 +3,7 @@
 apt-get -y install uwsgi-plugin-python uwsgi
 
 # reqs for Graphite
-apt-get -y install python-dev
+apt-get -y install build-essential libssl-dev libffi-dev python-dev
 apt-get -y install python-django python-django-tagging python-cairo
 apt-get -y install python-pip
 pip install pytz
