@@ -1,20 +1,14 @@
 #!/bin/bash
 # adapted from https://gist.github.com/micw/e80d739c6099078ce0f3
-
-set -e
- 
+set -e 
 # if [ $# -eq 0 ]; then
 #   echo "USAGE: $0 plugin1 plugin2 ..."
 #   exit 1
-# fi
- 
+# fi 
 plugin_list="build-pipeline-plugin git github ghprb"
-
 plugin_dir=/var/lib/jenkins/plugins
-file_owner=jenkins.jenkins
- 
-mkdir -p /var/lib/jenkins/plugins
- 
+file_owner=jenkins.jenkins 
+mkdir -p /var/lib/jenkins/plugins 
 installPlugin() {
   if [ -f ${plugin_dir}/${1}.hpi -o -f ${plugin_dir}/${1}.jpi ]; then
     if [ "$2" == "1" ]; then
