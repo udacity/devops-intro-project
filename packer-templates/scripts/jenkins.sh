@@ -1,7 +1,16 @@
 #!/bin/bash -eux
 
 # JDK and JRE are required for Jenkins
-apt-get install -y openjdk-7-jre openjdk-7-jdk unzip dos2unix
+apt-get install -y software-properties-common # Installs add-apt-repository in 14.04
+add-apt-repository ppa:openjdk-r/ppa
+apt-get update
+apt-get install -y \
+  openjdk-8-jre \
+  openjdk-8-jre-headless \
+  openjdk-8-jdk \
+  dos2unix \
+  zip \
+  unzip
 
 wget -q -O - https://jenkins-ci.org/debian/jenkins-ci.org.key | apt-key add -
 echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list
