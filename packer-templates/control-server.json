@@ -57,9 +57,9 @@
       "type": "amazon-ebs",
       "access_key": "{{ user `AWS_ACCESS_KEY_ID` }}",
       "secret_key": "{{ user `AWS_SECRET_ACCESS_KEY` }}",
-      "region": "us-east-1",
-      "source_ami": "ami-10b68a78",
-      "instance_type": "t1.micro",
+      "region": "us-east-2",
+      "source_ami": "ami-05c1fa8df71875112",
+      "instance_type": "t2.micro",
       "ssh_username": "ubuntu",
       "ami_name": "control-{{ user `PACKER_BOX_NAME` }}-{{timestamp}}"
     },
