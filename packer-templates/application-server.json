@@ -47,7 +47,6 @@
         "ssh_port": 22,
         "ssh_username": "vagrant",
         "ssh_wait_timeout": "10000s",
-        "type": "virtualbox-iso",
         "vm_name": "{{ user `PACKER_BOX_NAME` }}",
         "vboxmanage": [
           ["modifyvm", "{{.Name}}", "--memory", "1024"],
