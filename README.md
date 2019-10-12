@@ -36,6 +36,18 @@ Build 'virtualbox-iso' errored: ISO download failed.
 * Run `vagrant up`
 * Run `vagrant ssh` to connect to the server
 
+After the second step in which the box is created, there may be a chance that there is not a Vagrantfile create. If yes, do the following:
+* Go to the vagrant data directory (in windows: `~\.vagrant.d\boxes\`)
+* Find your desired box and change your directory to it. (In this case: `~\.vagrant.d\boxes\devops-appserver\0\virtualbox`)
+* If there is already a Vagrantfile there, update it the missing following lines:
+```
+Vagrant.configure("2") do |config|
+  config.vm.box = "devops-appserver"
+  config.vm.network "forwarded_port", guest: 80, host: 8080
+  config.vm.synced_folder "../../../../devops-kungfu", "/home/vagrant/devops-kungfu", create: true
+end
+```
+* Then you are good to go with `vagrant up` and then `vagrant ssh`.
 
 ## Part II: Cloning, developing, and running the web application
 
