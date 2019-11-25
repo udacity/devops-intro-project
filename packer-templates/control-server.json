@@ -1,6 +1,7 @@
 {
   "variables": {
       "PACKER_OS_FLAVOUR": "ubuntu",
+
       "PACKER_BOX_NAME": "ubuntu-18.04.3-live-server-amd64",
       "AWS_ACCESS_KEY_ID": "{{env `AWS_ACCESS_KEY_ID`}}",
       "AWS_SECRET_ACCESS_KEY": "{{env `AWS_SECRET_ACCESS_KEY`}}",
@@ -39,6 +40,7 @@
         "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
         "guest_os_type": "Ubuntu_64",
         "http_directory": "http",
+
         "iso_checksum": "b9beac143e36226aa8a0b03fc1cbb5921cff80123866e718aaeba4edb81cfa63",
         "iso_checksum_type": "sha256",
         "iso_url": "http://releases.ubuntu.com/18.04/{{ user `PACKER_BOX_NAME` }}.iso",
@@ -48,7 +50,7 @@
         "ssh_username": "vagrant",
         "ssh_wait_timeout": "10000s",
         "type": "virtualbox-iso",
-        "vm_name": "{{ user `PACKER_BOX_NAME` }}",
+        "vm_name": "control-{{ user `PACKER_BOX_NAME` }}",
         "vboxmanage": [
           ["modifyvm", "{{.Name}}", "--memory", "1024"],
           ["modifyvm", "{{.Name}}", "--cpus", "2"]
