@@ -1,0 +1,251 @@
+[33mcommit 288360d9eeabc16cd8de8e92b64836091027c732[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Puri <153841@cognizant.com>
+Date:   Wed Nov 4 18:20:43 2020 +0100
+
+    FileA version1
+
+[33mcommit 8fe3d844ee3669116698b767be6b1e83b40e18ad[m
+Author: Puri <153841@cognizant.com>
+Date:   Wed Nov 4 18:16:10 2020 +0100
+
+    first version commit
+
+[33mcommit f5824b5dc1391db03dec416314047275e24b5fde[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: b0581bd b5dea22
+Author: Brad Erickson <195061+13rac1@users.noreply.github.com>
+Date:   Mon Aug 12 14:27:08 2019 -0700
+
+    Merge pull request #84 from gauravsinghaec/gs-fix-remove-dups-attr
+    
+    chore: remove duplicate attribute type under builders
+
+[33mcommit b5dea2249ed4f14abb993ad85beafbe0f74a2308[m
+Author: Gaurav Kumar Singh <gauravsinghaec@gmail.com>
+Date:   Sat Aug 10 16:51:28 2019 +0530
+
+    chore: remove duplicate attribute type under builders
+
+[33mcommit b0581bd0a1d7d681f45bc89f932ee7e562ab1f6c[m
+Merge: 35ee961 5e06d5d
+Author: Brad Erickson <195061+13rac1@users.noreply.github.com>
+Date:   Sun Mar 10 09:03:37 2019 -0700
+
+    Merge pull request #79 from PradheepKumarA/master
+    
+    Replaced ISO name from ubuntu-14.04.5-server-amd64 to ubuntu-14.04.6-…
+
+[33mcommit 5e06d5d2ce315aa8d5c23699ccd94a1b75c0f04a[m
+Author: Pradheep Kumar A <pradheep.arul@gmail.com>
+Date:   Sun Mar 10 17:56:46 2019 +0530
+
+    Replaced ISO name from ubuntu-14.04.5-server-amd64 to ubuntu-14.04.6-server-amd64
+
+[33mcommit 35ee961f31326ab0318985eb0628a102704f2f49[m
+Author: Brad Erickson <bderickson@gmail.com>
+Date:   Fri Feb 15 17:41:29 2019 -0800
+
+    readme: Simplify build with packer directions
+    
+    Fixes #22
+
+[33mcommit fceca016291978e088d11f0dfbe6860565fe0b0d[m
+Author: Brad Erickson <bderickson@gmail.com>
+Date:   Fri Feb 15 17:06:55 2019 -0800
+
+    Upgrade Java 7->8 to fix the Jenkins install process
+    
+    Fixes #35
+    Fixes #50
+    Fixes #65
+
+[33mcommit b28f7b9b8786fe82298912687ea2c3c7ba8c0020[m
+Merge: 67b2a83 dc19ae8
+Author: Brad Erickson <195061+13rac1@users.noreply.github.com>
+Date:   Fri Feb 15 15:51:11 2019 -0800
+
+    Merge pull request #76 from mrunal4/master
+    
+    Replaced ISO name: 'ubuntu-14.04.4-server-amd64' with 'ubuntu-14.04.5…
+
+[33mcommit dc19ae89d8981b0c9a8d5e9c7fd88e11375cc8e9[m
+Author: mrunal4 <mrunal4888@gmail.com>
+Date:   Wed Nov 21 21:14:08 2018 +0530
+
+    Replaced ISO name: 'ubuntu-14.04.4-server-amd64' with 'ubuntu-14.04.5-server-amd64' and ISO sha256 checksum: '07e4bb5569814eab41fafac882ba127893e3ff0bdb7ec931c9b2d040e3e94e7a' with 'dde07d37647a1d2d9247e33f14e91acb10445a97578384896b4e1d985f754cc1' as now 'ubuntu-14.04.4-server-amd64' images does not exist in the specified links. Replaced details as per availablity.
+
+[33mcommit 67b2a83b715520f2be616fe4e77c1e67dff98702[m
+Author: Surajit A Bose <surajit@udacity.com>
+Date:   Fri Jun 10 23:39:23 2016 -0700
+
+    Update README.md
+
+[33mcommit e5c7955870fc38ee7aa890d25cdd847819b642d4[m
+Author: Surajit A Bose <surajit@udacity.com>
+Date:   Thu Jun 9 00:34:44 2016 -0700
+
+    Clarify instructions about forking and cloning repo
+
+[33mcommit 7a9ccd5ca88c1712add483cc077db4ced767d0e6[m
+Author: Surajit A Bose <surajit@udacity.com>
+Date:   Tue May 17 15:32:25 2016 -0700
+
+    Make minor edits
+
+[33mcommit 40dbf724e63b091658babf2b667a230dbf07c7f5[m
+Merge: 147b708 6586dcd
+Author: Dallas Frank <simplydallas@gmail.com>
+Date:   Sat May 14 23:24:18 2016 -0500
+
+    Merge pull request #15 from Crewe/patch-1
+    
+    Update README.md
+
+[33mcommit 6586dcd0b767669a00320e470b7b47818ffc19f3[m
+Author: Ryan Edwards-Crewe <Crewe@users.noreply.github.com>
+Date:   Fri May 13 11:44:35 2016 -0400
+
+    Update README.md
+    
+    Minor clarification and capitalization.
+
+[33mcommit 147b708ed4e713dcbe6faaab663f0668a8058bb3[m
+Author: Surajit A Bose <surajit@udacity.com>
+Date:   Thu May 12 21:51:28 2016 -0700
+
+    Wordsmith README some more
+
+[33mcommit 5147a2010023cbf154395dbe56c09e48272d6307[m
+Author: Surajit A Bose <surajit@udacity.com>
+Date:   Thu May 12 21:46:02 2016 -0700
+
+    Wordsmith README
+
+[33mcommit 27a93ca381ece597ce77a1fd70f3574466577f5f[m
+Author: Surajit A Bose <surajit@udacity.com>
+Date:   Thu May 12 21:43:02 2016 -0700
+
+    Clarify README and remove link to Cloud instructions
+
+[33mcommit 4cd38a8c460058dbae82ed2fd09e907d7b917c09[m
+Merge: 4139bf8 4574f04
+Author: Dallas Frank <simplydallas@gmail.com>
+Date:   Sun Apr 24 20:41:41 2016 -0500
+
+    Merge pull request #14 from kirkbrunson/master
+    
+    Docs: Clarified directory for Part 1
+
+[33mcommit 4574f043f48a2d5e47c47fe3247e58fd77453d14[m
+Author: Kirk Brunson <hello@kirkbrunson.com>
+Date:   Sun Apr 24 21:29:02 2016 -0400
+
+    Docs: Clarified directory for Part 1
+
+[33mcommit 4139bf8452eff0e13e17283cee99a9f9c949f224[m
+Author: simplydallas <simplydallas@gmail.com>
+Date:   Fri Apr 22 20:33:01 2016 -0500
+
+    updated readme and .gitignore
+
+[33mcommit 7f9d1f122f04e0532cd124bd6979d5da751aec24[m
+Merge: dec379b 9cc5e4d
+Author: Dallas Frank <simplydallas@gmail.com>
+Date:   Fri Apr 22 15:08:59 2016 -0500
+
+    Merge pull request #13 from Crewe/add-digitalocean-builder
+    
+    Add DigitalOcean builder to packer scripts
+
+[33mcommit 9cc5e4deefc87513d2db741921047da5f8cfc097[m
+Merge: a91cdaa 24fc089
+Author: Ryan Edwards-Crewe <ryan@ryancrewe.com>
+Date:   Fri Apr 22 13:16:33 2016 -0400
+
+    Merge branch 'master' into add-digitalocean-builder
+
+[33mcommit 24fc0896afbda5bb9ceebdee513c2ef873c1c86d[m
+Merge: defc4ce dec379b
+Author: Ryan Edwards-Crewe <ryan@ryancrewe.com>
+Date:   Fri Apr 22 13:13:40 2016 -0400
+
+    Merge https://github.com/udacity/devops-intro-project
+
+[33mcommit a91cdaa0b6a1a9423b7acf62f1e79703add2d376[m
+Author: Ryan Edwards-Crewe <ryan@ryancrewe.com>
+Date:   Fri Apr 22 13:10:39 2016 -0400
+
+    Added builder for DigitalOcean
+
+[33mcommit dec379b5fe383d8a69c1da6e6d94dd86d212deaa[m
+Merge: 7885ca8 c0cb67c
+Author: Dallas Frank <simplydallas@gmail.com>
+Date:   Fri Apr 22 09:43:17 2016 -0500
+
+    Merge pull request #12 from Crewe/graphite-timezone-fix
+    
+    Added pytz install to graphite.sh
+
+[33mcommit 7885ca88d324f3cbfbbe4227d58793daf4ef1799[m
+Merge: 321ed4b c7e1bd9
+Author: Dallas Frank <simplydallas@gmail.com>
+Date:   Fri Apr 22 09:32:04 2016 -0500
+
+    Merge pull request #10 from csgray/ubuntu-14.04.4
+    
+    Update PACKER_BOX_NAME and iso_checksum for Ubuntu 14.04.4
+
+[33mcommit c0cb67cce8e3dc44b5e46d70abe7d19a3da77a47[m
+Author: Ryan Edwards-Crewe <github@ryanedwardscrewe.com>
+Date:   Mon Apr 18 21:04:20 2016 -0400
+
+    Added pytz install to graphite.sh
+    
+    Fixes Graphite runtime error:
+    > AttributeError: 'LocalTimezone' object has no attribute 'normalize'
+
+[33mcommit defc4ce4f37b83b07ce0c402f3b899a7d7dcdbe4[m
+Author: Ryan Edwards-Crewe <github@ryanedwardscrewe.com>
+Date:   Mon Apr 18 20:41:44 2016 -0400
+
+    Added pytz to Graphic config script
+    
+    Eliminates runtime bug:
+    > AttributeError: 'LocalTimezone' object has no attribute 'normalize'
+
+[33mcommit e262f65ff02dde226bf56ee213cc4b9364d2bf31[m
+Author: rec <ryan.edwards-crewe@tbaytel.com>
+Date:   Wed Apr 13 16:52:23 2016 -0400
+
+    Added builder for DigitalOcean
+
+[33mcommit 484ac1702b7b88e5ebac8dfe13b2f2ad9cb25ac4[m
+Author: rec <ryan.edwards-crewe@tbaytel.com>
+Date:   Tue Apr 12 12:01:48 2016 -0400
+
+    Upgrade to Ubuntu 14.04.4
+
+[33mcommit c7e1bd9875bdb4cda3bc6faf84cbf00edcfb0439[m
+Author: csgray <csgray@alaska.edu>
+Date:   Tue Mar 29 14:13:43 2016 -0800
+
+    Update PACKER_BOX_NAME and iso_checksum for Ubuntu 14.04.4
+
+[33mcommit 321ed4be1c8c48f12c42dfa9e145b06e39e8716a[m
+Author: Gundega Dekena <gundega@udacity.com>
+Date:   Mon Aug 31 17:33:27 2015 +0300
+
+    fix(jenkins): install script on windows and example jobs to be same as in video
+
+[33mcommit 0face25442280ece3b3f2f2d5a570968a9bb95e3[m
+Author: Karl Krueger <karl@udacity.com>
+Date:   Mon Aug 10 14:10:33 2015 -0700
+
+    upgrade control server to ubuntu 14.04.03 as well
+
+[33mcommit d7e85b3431004d98493794cf8ff533958bf48e47[m
+Author: Karl Krueger <karl@udacity.com>
+Date:   Mon Aug 10 14:01:26 2015 -0700
+
+    upgrade to ubuntu version 14.04.3
+
+[33mcommit a98a23294cc27d61a9ec223e16b01c0ae1
