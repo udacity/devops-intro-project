@@ -1,7 +1,8 @@
 {
   "variables": {
       "PACKER_OS_FLAVOUR": "ubuntu",
-      "PACKER_BOX_NAME": "ubuntu-14.04.6-server-amd64",
+[
+      "PACKER_BOX_NAME": "ubuntu-18.04.3-live-server-amd64",
       "AWS_ACCESS_KEY_ID": "{{env `AWS_ACCESS_KEY_ID`}}",
       "AWS_SECRET_ACCESS_KEY": "{{env `AWS_SECRET_ACCESS_KEY`}}",
       "DIGITALOCEAN_API_TOKEN": "{{env `DIGITALOCEAN_API_TOKEN`}}"
@@ -39,9 +40,9 @@
         "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
         "guest_os_type": "Ubuntu_64",
         "http_directory": "http",
-        "iso_checksum": "b17d7c1e9d0321ad5810ba77b69aef43f0f29a5422b08120e6ee0576c4527c0e",
+        "iso_checksum": "b9beac143e36226aa8a0b03fc1cbb5921cff80123866e718aaeba4edb81cfa63",
         "iso_checksum_type": "sha256",
-        "iso_url": "http://releases.ubuntu.com/trusty/{{ user `PACKER_BOX_NAME` }}.iso",
+        "iso_url": "http://releases.ubuntu.com/18.04/{{ user `PACKER_BOX_NAME` }}.iso",
         "shutdown_command": "echo 'vagrant'|sudo -S shutdown -P now",
         "ssh_password": "vagrant",
         "ssh_port": 22,
@@ -59,7 +60,7 @@
         "access_key": "{{ user `AWS_ACCESS_KEY_ID` }}",
         "secret_key": "{{ user `AWS_SECRET_ACCESS_KEY` }}",
         "region": "us-east-1",
-        "source_ami": "ami-10b68a78",
+        "source_ami": "ami-0ac019f4fcb7cb7e6s",
         "instance_type": "t1.micro",
         "ssh_username": "ubuntu",
         "ami_name": "packer-app-server {{timestamp}}"
@@ -68,16 +69,16 @@
         "type": "googlecompute",
         "account_file": "account.json",
         "project_id": "devops-intro-project",
-        "source_image": "ubuntu-1404-trusty-v20150316",
+        "source_image": "ubuntu-1804-bionic-v20181222",
         "zone": "us-central1-a",
-        "image_name": "application-ubuntu-1404-{{timestamp}}",
+        "image_name": "application-ubuntu-1804-{{timestamp}}",
         "machine_type": "n1-standard-1",
         "ssh_username": "ubuntu"
       },
       {
         "type": "digitalocean",
         "api_token": "{{ user `DIGITALOCEAN_API_TOKEN` }}",
-        "image": "ubuntu-14-04-x64",
+        "image": "ubuntu-18.04.3-live-server-amd64",
         "region": "tor1",
         "size": "512mb",
         "droplet_name": "udacity-devops",

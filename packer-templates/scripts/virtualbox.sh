@@ -1,5 +1,3 @@
-#!/bin/bash -eux
-
 echo "Installing Virtualbox Guest Utils"
 apt-get -y install dkms
 VBOX_VERSION=$(cat /home/vagrant/.vbox_version)
