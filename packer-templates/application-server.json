@@ -1,124 +1,138 @@
 {
-  "variables": {
-      "PACKER_OS_FLAVOUR": "ubuntu",
-      "PACKER_BOX_NAME": "ubuntu-14.04.6-server-amd64",
-      "AWS_ACCESS_KEY_ID": "{{env `AWS_ACCESS_KEY_ID`}}",
-      "AWS_SECRET_ACCESS_KEY": "{{env `AWS_SECRET_ACCESS_KEY`}}",
-      "DIGITALOCEAN_API_TOKEN": "{{env `DIGITALOCEAN_API_TOKEN`}}"
-    },
-    "builders": [
-      {
-        "type": "virtualbox-iso",
-        "boot_command": [
-          "<esc><wait>",
-          "<esc><wait>",
-          "<enter><wait>",
-          "/install/vmlinuz<wait>",
-          " auto<wait>",
-          " console-setup/ask_detect=false<wait>",
-          " console-setup/layoutcode=us<wait>",
-          " console-setup/modelcode=pc105<wait>",
-          " debconf/frontend=noninteractive<wait>",
-          " debian-installer=en_US<wait>",
-          " fb=false<wait>",
-          " initrd=/install/initrd.gz<wait>",
-          " kbd-chooser/method=us<wait>",
-          " keyboard-configuration/layout=USA<wait>",
-          " keyboard-configuration/variant=USA<wait>",
-          " locale=en_US<wait>",
-          " netcfg/get_domain=vm<wait>",
-          " netcfg/get_hostname=vagrant<wait>",
-          " noapic<wait>",
-          " preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg<wait>",
-          " -- <wait>",
-          "<enter><wait>"
+  "builders": [
+    {
+      "boot_command": [
+        "<esc><wait>",
+        "<esc><wait>",
+        "<enter><wait>",
+        "/install/vmlinuz<wait>",
+        " auto<wait>",
+        " console-setup/ask_detect=false<wait>",
+        " console-setup/layoutcode=us<wait>",
+        " console-setup/modelcode=pc105<wait>",
+        " debconf/frontend=noninteractive<wait>",
+        " debian-installer=en_US<wait>",
+        " fb=false<wait>",
+        " initrd=/install/initrd.gz<wait>",
+        " kbd-chooser/method=us<wait>",
+        " keyboard-configuration/layout=USA<wait>",
+        " keyboard-configuration/variant=USA<wait>",
+        " locale=en_US<wait>",
+        " netcfg/get_domain=vm<wait>",
+        " netcfg/get_hostname=vagrant<wait>",
+        " noapic<wait>",
+        " preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg<wait>",
+        " -- <wait>",
+        "<enter><wait>"
+      ],
+      "boot_wait": "10s",
+      "disk_size": 10140,
+      "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
+      "guest_os_type": "Ubuntu_64",
+      "headless": false,
+      "http_directory": "http",
+      "iso_checksum": "sha256:b17d7c1e9d0321ad5810ba77b69aef43f0f29a5422b08120e6ee0576c4527c0e",
+      "iso_url": "http://releases.ubuntu.com/trusty/{{ user `PACKER_BOX_NAME` }}.iso",
+      "shutdown_command": "echo 'vagrant'|sudo -S shutdown -P now",
+      "ssh_password": "vagrant",
+      "ssh_port": 22,
+      "ssh_timeout": "10000s",
+      "ssh_username": "vagrant",
+      "type": "virtualbox-iso",
+      "vboxmanage": [
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--memory",
+          "1024"
         ],
-        "boot_wait": "10s",
-        "headless": false,
-        "disk_size": 10140,
-        "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
-        "guest_os_type": "Ubuntu_64",
-        "http_directory": "http",
-        "iso_checksum": "b17d7c1e9d0321ad5810ba77b69aef43f0f29a5422b08120e6ee0576c4527c0e",
-        "iso_checksum_type": "sha256",
-        "iso_url": "http://releases.ubuntu.com/trusty/{{ user `PACKER_BOX_NAME` }}.iso",
-        "shutdown_command": "echo 'vagrant'|sudo -S shutdown -P now",
-        "ssh_password": "vagrant",
-        "ssh_port": 22,
-        "ssh_username": "vagrant",
-        "ssh_wait_timeout": "10000s",
-        "vm_name": "{{ user `PACKER_BOX_NAME` }}",
-        "vboxmanage": [
-          ["modifyvm", "{{.Name}}", "--memory", "1024"],
-          ["modifyvm", "{{.Name}}", "--cpus", "2"]
-        ],
-        "virtualbox_version_file": ".vbox_version"
-      },
-      {
-        "type": "amazon-ebs",
-        "access_key": "{{ user `AWS_ACCESS_KEY_ID` }}",
-        "secret_key": "{{ user `AWS_SECRET_ACCESS_KEY` }}",
-        "region": "us-east-1",
-        "source_ami": "ami-10b68a78",
-        "instance_type": "t1.micro",
-        "ssh_username": "ubuntu",
-        "ami_name": "packer-app-server {{timestamp}}"
-      },
-      {
-        "type": "googlecompute",
-        "account_file": "account.json",
-        "project_id": "devops-intro-project",
-        "source_image": "ubuntu-1404-trusty-v20150316",
-        "zone": "us-central1-a",
-        "image_name": "application-ubuntu-1404-{{timestamp}}",
-        "machine_type": "n1-standard-1",
-        "ssh_username": "ubuntu"
-      },
-      {
-        "type": "digitalocean",
-        "api_token": "{{ user `DIGITALOCEAN_API_TOKEN` }}",
-        "image": "ubuntu-14-04-x64",
-        "region": "tor1",
-        "size": "512mb",
-        "droplet_name": "udacity-devops",
-        "private_networking": true
-      }
-  ],
-
-  "provisioners": [
-    {
-      "type": "shell",
-      "execute_command": "echo 'vagrant'|{{.Vars}} sudo -S -E bash '{{.Path}}'",
-      "scripts": [
-        "scripts/update.sh"
-      ]
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--cpus",
+          "2"
+        ]
+      ],
+      "virtualbox_version_file": ".vbox_version",
+      "vm_name": "{{ user `PACKER_BOX_NAME` }}"
     },
     {
-    "type": "shell",
-    "only": ["virtualbox-iso"],
-    "execute_command": "echo 'vagrant'|sudo -S -E bash '{{.Path}}'",
-    "scripts": [
-        "scripts/virtualbox.sh",
-        "scripts/vagrant.sh"
-      ]
+      "access_key": "{{ user `AWS_ACCESS_KEY_ID` }}",
+      "ami_name": "packer-app-server {{timestamp}}",
+      "instance_type": "t1.micro",
+      "region": "us-east-1",
+      "secret_key": "{{ user `AWS_SECRET_ACCESS_KEY` }}",
+      "source_ami": "ami-10b68a78",
+      "ssh_username": "ubuntu",
+      "type": "amazon-ebs"
     },
     {
-      "type": "shell",
-      "execute_command": "echo 'vagrant'|sudo -S -E bash '{{.Path}}'",
-      "scripts": [
-        "scripts/application.sh",
-        "scripts/cleanup.sh"
-      ]
+      "account_file": "account.json",
+      "image_name": "application-ubuntu-1404-{{timestamp}}",
+      "machine_type": "n1-standard-1",
+      "project_id": "devops-intro-project",
+      "source_image": "ubuntu-1404-trusty-v20150316",
+      "ssh_username": "ubuntu",
+      "type": "googlecompute",
+      "zone": "us-central1-a"
+    },
+    {
+      "api_token": "{{ user `DIGITALOCEAN_API_TOKEN` }}",
+      "droplet_name": "udacity-devops",
+      "image": "ubuntu-14-04-x64",
+      "private_networking": true,
+      "region": "tor1",
+      "size": "512mb",
+      "type": "digitalocean"
     }
   ],
   "post-processors": [
     [
       {
-        "type": "vagrant",
-        "except": ["googlecompute", "digitalocean"],
         "compression_level": "9",
-        "output": "{{.Provider}}/{{ user `PACKER_BOX_NAME` }}-appserver_{{.Provider}}.box"
+        "except": [
+          "googlecompute",
+          "digitalocean"
+        ],
+        "output": "{{.Provider}}/{{ user `PACKER_BOX_NAME` }}-appserver_{{.Provider}}.box",
+        "type": "vagrant"
       }
     ]
-  ]
+  ],
+  "provisioners": [
+    {
+      "execute_command": "echo 'vagrant'|{{.Vars}} sudo -S -E bash '{{.Path}}'",
+      "scripts": [
+        "scripts/update.sh"
+      ],
+      "type": "shell"
+    },
+    {
+      "execute_command": "echo 'vagrant'|sudo -S -E bash '{{.Path}}'",
+      "only": [
+        "virtualbox-iso"
+      ],
+      "scripts": [
+        "scripts/virtualbox.sh",
+        "scripts/vagrant.sh"
+      ],
+      "type": "shell"
+    },
+    {
+      "execute_command": "echo 'vagrant'|sudo -S -E bash '{{.Path}}'",
+      "scripts": [
+        "scripts/application.sh",
+        "scripts/cleanup.sh"
+      ],
+      "type": "shell"
+    }
+  ],
+  "variables": {
+    "AWS_ACCESS_KEY_ID": "{{env `AWS_ACCESS_KEY_ID`}}",
+    "AWS_SECRET_ACCESS_KEY": "{{env `AWS_SECRET_ACCESS_KEY`}}",
+    "DIGITALOCEAN_API_TOKEN": "{{env `DIGITALOCEAN_API_TOKEN`}}",
+    "PACKER_BOX_NAME": "ubuntu-14.04.6-server-amd64",
+    "PACKER_OS_FLAVOUR": "ubuntu"
+  }
 }
+
