@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "udacity-devops-341410",
+  "private_key_id": "968c0c039fd75f199e48fc4a19e6d54679e8bd9c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDNoh3XIzlrZb91\n1dS2AEJo3dzvdACiZ21Kp8dL9uvg/3zpxBRyfbbg5PVFacu22Xr2YlMjmrTNO2bo\nQlUP5uM0GMAZZo3CfFQsROlROUrJPA2j3w2/4vduJk1fZBcmJT+fen+3l1UBZmG0\nS/YA72hcplpUAjihpPM9/HiFD4SpqEd1xrG3X3sJMcU0QBMdN9lHwcMxE46faMki\nG5iUP8qmJnhivj2BsdAscLBsbWeZBRfckcUikEEswujplF9bsxfYcdfDH/Chl8+Q\ny2Sacg2b5j8vTffz3zJh2stWBu1gsgtUjCfzhD8xY1P4Ay+87+19wqsyqzfYgNpU\nWbVtSrj1AgMBAAECggEALy7DFRGmg6+JgmKpl4cwtboujxz5ZkpACBC+SH5kOjC1\nOzg8DtcspqayZpZzYUW+kpkWBYXidXLrVmCd/vOV72a8cTeYUGdRswSu2m3AbLMk\nWBT+pShRaMtOFpSzQRPr6M5lTr1hClyxD3sce7NzKUscT8lgsCpWi8MJ7lIUuQ6T\n20Sce6NIWgDQkNMaTfXHWlYoiFqHE8A0LxCXPaZu9T+ZQ+fTCJHvecN3mDm2QEwG\ngHIwPDd+tgjXY+hpTWTFgc8VpANPV2xOZ99eiepGnb+qgNiO/A0yuJ8bDpz0NQtX\nnBuzrmidTpZ86SJ9bpe5c9pbSGDycICiqr5QU8s/kwKBgQDsuUslVVs0mvdyU+hP\nt53zYQHfkblHSYnIQ/gAorwj2+ZTSsKWZXhw9w1LTWx5INt9nSVb6nnJdTWUuUhf\ny3pQ2JgAACFFdR1wKBkIjJqNKi/EachYonfycXGKHakR1bMgO3AJ5KAySdgoYSlX\nx/AbR8MRX+SwNUO11JMyMQXxuwKBgQDeYLb3fF2RFb4BB9POphQb2Uq0uInuKI6B\nijScyF0xNb+R8hyCpXtDT6hNb/KzI+Wg8n0BpWMaVtqwC+cXxDZPf1FAMcWBEbSB\nIXRkso2d2CrnNNdvP6CF0U+hZObJGOzGy4aSns69tqDb5+VZyjtpytFi+ebI/EyW\nzRCxqIg9DwKBgGxgWJr6/QqUd/0LlSwJ8HJgUy871AtjC4V4OK5x0pjIMCap73RT\neFSfhqKXC7ZY6KQVsejm7GLjGmjAevYAfjtNLimx5YmbGKMkeHGFjaxbSAswMt0B\nZNDGRyjoc2MK5zs2exDMbtsXG7NA6GCb1L1omVH3CQfzGtDARbOQ5hvJAoGAbdHb\nadssJhNTsxSXgE06Twp/P0KHM2sp/UUweGDmzP+bLMshU0+/0N0M47kuZVOL+nDm\nVSLFD2PnOduW84C9xYK9sHMj83q35rGL1pLrJxFzFp1c6x7D+nIE3lKDOrqpa/9k\n5RGyTbRcOl2KQU6DCtrTjwqU85rNhAeff+0X4vcCgYBn4DuarxTfmkpWqhrBSq0K\n6y+uG7Lo7hd5Jghyn3fr3MZw2AaYgnhxn3bCmrjf8DyGjtbsXDxrVHGrpAxvMrIx\nVhiF79PJ5uqaJtH46LVktismLBIea1a1Nl9KCI3d1ASZ55Vw5nhaZ4xzMWrKhbL3\nlfDBIobXegbCXa5Ex1yvcQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "udacity-devops@udacity-devops-341410.iam.gserviceaccount.com",
+  "client_id": "103244103713398041061",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/udacity-devops%40udacity-devops-341410.iam.gserviceaccount.com"
+}

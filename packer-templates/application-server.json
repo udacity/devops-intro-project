@@ -64,13 +64,14 @@
       "secret_key": "{{ user `AWS_SECRET_ACCESS_KEY` }}",
       "source_ami": "ami-10b68a78",
       "ssh_username": "ubuntu",
-      "type": "amazon-ebs"
+      "type": "amazon-ebs",
+      "skip_create_ami": true
     },
     {
       "account_file": "account.json",
       "image_name": "application-ubuntu-1404-{{timestamp}}",
       "machine_type": "n1-standard-1",
-      "project_id": "devops-intro-project",
+      "project_id": "udacity-devops-341410",
       "source_image": "ubuntu-1404-trusty-v20150316",
       "ssh_username": "ubuntu",
       "type": "googlecompute",

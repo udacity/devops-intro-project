@@ -27,7 +27,7 @@ checksums didn't match expected
 Build 'virtualbox-iso' errored: ISO download failed.
 
 ==> Some builds didn't complete successfully and had errors:
---> virtualbox-iso: ISO download failed.
+==> virtualbox-iso: ISO download failed.
 ```
 
 * Run `cd virtualbox`
