@@ -1,5 +1,4 @@
-Instructions for Practice Project
-========================================
+# Instructions for Practice Project
 
 These instructions assume familiarity with Git and GitHub. If you are not comfortable with those tools, please complete Udacity's [How to Use Git and GitHub](https://www.udacity.com/course/how-to-use-git-and-github--ud775) course before proceeding.
 
@@ -18,7 +17,7 @@ After installing the required tools, you will need to ensure that your computer 
 * Run `cd packer-templates`
 * Run `packer build -only=virtualbox-iso application-server.json`. You may see various timeouts and errors, as shown below. If you do, retry the command until the ISO download succeeds:
 
-```
+``` shell
 read: operation timed out
 ==> virtualbox-iso: ISO download failed.
 Build 'virtualbox-iso' errored: ISO download failed.
@@ -28,7 +27,7 @@ checksums didn't match expected
 Build 'virtualbox-iso' errored: ISO download failed.
 
 ==> Some builds didn't complete successfully and had errors:
---> virtualbox-iso: ISO download failed.
+==> virtualbox-iso: ISO download failed.
 ```
 
 * Run `cd virtualbox`
@@ -36,12 +35,11 @@ Build 'virtualbox-iso' errored: ISO download failed.
 * Run `vagrant up`
 * Run `vagrant ssh` to connect to the server
 
-
 ## Part II: Cloning, developing, and running the web application
 
 * On your local machine go to the root directory of the cloned repository
 * Run `git clone https://github.com/chef/devops-kungfu.git devops-kungfu`
-* Open http://localhost:8080 from your local machine to see the app running.
+* Open <http://localhost:8080> from your local machine to see the app running.
 * In the VM, run `cd devops-kungfu`
 * To install app specific node packages, run `sudo npm install`. You may see several errors; they can be ignored for now.
 * Now you can run tests with the command `grunt -v`. The tests will run, then quit with an error.
